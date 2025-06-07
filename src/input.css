@@ -5,7 +5,7 @@
 /* Custom dark background */
 @layer base {
   body {
-    @apply bg-zinc-950 text-zinc-200;
+    @apply bg-zinc-900 text-zinc-200;
   }
 }
 
@@ -20,5 +20,17 @@
   }
   .pm-btn {
     @apply text-white px-4 py-2 rounded transition-colors;
+  }
+  .pm-section {
+    @apply bg-zinc-800/60 border border-zinc-700 rounded-lg p-4 space-y-3;
+  }
+  .pm-checkbox-label {
+    @apply flex items-center gap-2 font-medium;
+  }
+  .pm-inner {
+    @apply grid gap-2 pl-6;
+  }
+  .pm-preview {
+    @apply bg-zinc-900 border border-zinc-700 rounded p-3 font-mono text-sm overflow-y-auto;
   }
 }
