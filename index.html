@@ -14,67 +14,8 @@
     <textarea id="description" rows="3" placeholder="Describe your scene..." class="pm-input h-24"></textarea>
   </div>
 
-  <!-- Enable / disable blocks -->
-  <div class="space-y-4">
-    <div class="pm-section">
-      <label class="pm-checkbox-label">
-        <input type="checkbox" id="cbIllum" checked class="accent-blue-500">
-        <span>Illumination</span>
-      </label>
-      <div class="pm-inner">
-        <label>Direction
-          <select id="illumDirection" class="pm-select">
-            <option>front</option><option>back</option>
-            <option>left</option><option>right</option>
-            <option>top</option><option>bottom</option>
-          </select>
-        </label>
-        <label>Force
-          <select id="illumForce" class="pm-select">
-            <option>soft</option><option>medium</option><option>hard</option>
-          </select>
-        </label>
-        <label>Altitude (deg)
-          <input type="number" id="illumAlt" value="45" class="pm-input">
-        </label>
-        <label>Color
-          <input type="text" id="illumColor" value="neutral white" class="pm-input">
-        </label>
-      </div>
-    </div>
-
-    <div class="pm-section">
-      <label class="pm-checkbox-label">
-        <input type="checkbox" id="cbClothes" class="accent-blue-500">
-        <span>Clothes</span>
-      </label>
-      <div class="pm-inner">
-        <label>Details
-          <input type="text" id="clothesTxt" placeholder="Red jacket, jeans ..." class="pm-input">
-        </label>
-      </div>
-    </div>
-
-    <div class="pm-section">
-      <label class="pm-checkbox-label">
-        <input type="checkbox" id="cbStyle" class="accent-blue-500">
-        <span>Style</span>
-      </label>
-      <div class="pm-inner">
-        <label>Rendering
-          <select id="styleRendering" class="pm-select">
-            <option>realistic</option>
-            <option>anime</option>
-            <option>plasticine</option>
-            <option>paint</option>
-          </select>
-        </label>
-        <label>Palette
-          <input type="text" id="stylePalette" placeholder="dark teal, neon pink" class="pm-input">
-        </label>
-      </div>
-    </div>
-  </div>
+  <!-- Sections dynamically rendered -->
+  <div id="sections" class="space-y-4"></div>
 
   <!-- Preview + actions -->
   <div>
@@ -93,6 +34,7 @@
     <ul id="history" class="space-y-2"></ul>
   </div>
 
+  <script src="config.js"></script>
   <script src="renderer.js"></script>
 </body>
 </html>
