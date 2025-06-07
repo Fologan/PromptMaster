@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Electron builds
+dist/
+out/
+*.exe
+*.dmg
+
+# Logs
+*.log
+
+# Historial local
+.history/
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Snapshots opcionales
+history/*.json 

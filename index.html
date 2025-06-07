@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PromptMaster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>PromptMaster</h1>
+
+  <!-- Description -->
+  <label>Description</label>
+  <textarea id="description" rows="3" placeholder="Describe your scene..."></textarea>
+
+  <!-- Enable / disable blocks -->
+  <div class="block">
+    <input type="checkbox" id="cbIllum" checked>
+    <span>Illumination</span>
+    <div class="inner">
+      <label>Direction
+        <select id="illumDirection">
+          <option>front</option><option>back</option>
+          <option>left</option><option>right</option>
+          <option>top</option><option>bottom</option>
+        </select>
+      </label>
+      <label>Force
+        <select id="illumForce">
+          <option>soft</option><option>medium</option><option>hard</option>
+        </select>
+      </label>
+      <label>Altitude (deg)
+        <input type="number" id="illumAlt" value="45">
+      </label>
+      <label>Color
+        <input type="text" id="illumColor" value="neutral white">
+      </label>
+    </div>
+  </div>
+
+  <div class="block">
+    <input type="checkbox" id="cbClothes">
+    <span>Clothes</span>
+    <div class="inner">
+      <label>Details
+        <input type="text" id="clothesTxt" placeholder="Red jacket, jeans ...">
+      </label>
+    </div>
+  </div>
+
+  <div class="block">
+    <input type="checkbox" id="cbStyle">
+    <span>Style</span>
+    <div class="inner">
+      <label>Rendering
+        <select id="styleRendering">
+          <option>realistic</option>
+          <option>anime</option>
+          <option>plasticine</option>
+          <option>paint</option>
+        </select>
+      </label>
+      <label>Palette
+        <input type="text" id="stylePalette" placeholder="dark teal, neon pink">
+      </label>
+    </div>
+  </div>
+
+  <!-- Preview + actions -->
+  <h2>Prompt preview</h2>
+  <pre id="preview"></pre>
+
+  <button id="copyBtn">Copy</button>
+  <button id="saveBtn">Record</button>
+
+  <!-- History -->
+  <h2>History</h2>
+  <ul id="history"></ul>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
