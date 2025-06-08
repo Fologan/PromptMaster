@@ -6,32 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="p-6 max-w-3xl mx-auto space-y-6">
-  <h1 class="text-2xl font-bold">PromptMaster</h1>
+  <h1 class="text-5xl font-black text-center font-zinc-200">PromptMaster</h1>
 
-  <!-- Description -->
-  <div>
-    <label for="description" class="block text-sm font-medium mb-1">Description</label>
-    <textarea id="description" rows="3" placeholder="Describe your scene..." class="pm-input h-24"></textarea>
-  </div>
+  <div class="flex gap-6">
+    <!-- Sección A -->
+    <div class="seccion-a flex-1">
+      <!-- Description -->
+      <div>
+        <label for="description" class="block text-sm font-medium mb-1">Description</label>
+        <textarea id="description" rows="3" placeholder="Describe your scene..." class="pm-input h-24 w-full"></textarea>
+      </div>
 
-  <!-- Sections dynamically rendered -->
-  <div id="sections" class="space-y-4"></div>
+      <!-- Sections dynamically rendered -->
+      <div id="sections" class="space-y-4"></div>
+    </div>
 
-  <!-- Preview + actions -->
-  <div>
-    <h2 class="text-lg font-semibold mb-2">Prompt preview</h2>
-    <pre id="preview" class="pm-preview h-32"></pre>
-  </div>
+    <!-- Sección B -->
+    <div class="seccion-b flex-1">
+      <!-- Preview + actions -->
+      <div>
+        <h2 class="text-lg font-semibold mb-2">Prompt preview</h2>
+        <pre id="preview" class="pm-preview h-32"></pre>
+      </div>
 
-  <div class="flex gap-2">
-    <button id="copyBtn" class="pm-btn bg-blue-600 hover:bg-blue-700">Copy</button>
-    <button id="saveBtn" class="pm-btn bg-green-600 hover:bg-green-700">Record</button>
-  </div>
+      <div class="flex gap-2">
+        <button id="copyBtn" class="pm-btn bg-blue-600 hover:bg-blue-700">Copy</button>
+        <button id="saveBtn" class="pm-btn bg-green-600 hover:bg-green-700">Record</button>
+      </div>
 
-  <!-- History -->
-  <div>
-    <h2 class="text-lg font-semibold mt-4 mb-2">History</h2>
-    <ul id="history" class="space-y-2"></ul>
+      <!-- History -->
+      <div>
+        <h2 class="text-lg font-semibold mt-4 mb-2">History</h2>
+        <ul id="history" class="space-y-2"></ul>
+      </div>
+    </div>
   </div>
 
   <script src="config.js"></script>
