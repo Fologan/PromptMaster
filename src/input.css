@@ -40,13 +40,7 @@
   }
   
   .pm-checkbox-label input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 1rem;
-    height: 1rem;
-    margin: 0;
-    z-index: 2;
-    cursor: pointer;
+    @apply absolute opacity-0 w-4 h-4 m-0 z-20 cursor-pointer appearance-none box-border;
   }
   
   .pm-custom-checkbox {
