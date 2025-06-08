@@ -5,32 +5,95 @@
 /* Custom dark background */
 @layer base {
   body {
-    @apply bg-zinc-900 text-zinc-200;
+    @apply bg-zinc-900 text-zinc-400;
   }
 }
 
 @layer components {
   .pm-input {
-    @apply w-full bg-zinc-900 border border-zinc-700 rounded px-3 py-2
-           focus:outline-none focus:border-blue-500;
+    @apply w-full px-3 py-2 border-2 border-gray-200 rounded-lg bg-white text-gray-800 transition-all duration-200;
   }
+  
+  .pm-input:focus {
+    @apply outline-none border-blue-500 ring-2 ring-blue-200 text-gray-800;
+  }
+  
   .pm-select {
-    @apply w-full bg-zinc-900 border border-zinc-700 rounded px-3 py-2
-           focus:outline-none focus:border-blue-500;
+    @apply w-full px-3 py-2 border-2 border-gray-200 rounded-lg bg-white text-gray-800 cursor-pointer transition-all duration-200;
   }
-  .pm-btn {
-    @apply text-white px-4 py-2 rounded transition-colors;
+  
+  .pm-select:focus {
+    @apply outline-none border-blue-500 ring-2 ring-blue-200;
   }
+  
   .pm-section {
-    @apply bg-zinc-800/60 border border-zinc-700 rounded-lg p-4 space-y-3;
+    @apply bg-white border-2 border-gray-200 text-gray-800 rounded-xl p-4 transition-all duration-200;
   }
+  
+  .pm-section:hover {
+    @apply border-blue-500 shadow-md;
+  }
+  
   .pm-checkbox-label {
-    @apply flex items-center gap-2 font-medium;
+    @apply flex items-center gap-2 font-semibold text-gray-800 cursor-pointer;
+    position: relative;
   }
+  
+  .pm-checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .pm-custom-checkbox {
+    width: 1rem;
+    height: 1rem;
+    min-width: 1rem;
+    min-height: 1rem;
+    border-radius: 0.25rem;
+    border: 2px solid #d1d5db;
+    background: #fff;
+    display: inline-block;
+    position: relative;
+    transition: border-color 0.2s, background 0.2s;
+    box-sizing: border-box;
+  }
+  
+  .pm-checkbox-label input[type="checkbox"]:checked + .pm-custom-checkbox {
+    background: #2563eb;
+    border-color: #2563eb;
+  }
+  
+  .pm-checkbox-label input[type="checkbox"]:checked + .pm-custom-checkbox::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
   .pm-inner {
-    @apply grid gap-2 pl-6;
+    @apply mt-4 pt-4 border-t border-gray-200 grid gap-4;
   }
+  
   .pm-preview {
-    @apply bg-zinc-900 border border-zinc-700 rounded p-3 font-mono text-sm overflow-y-auto;
+    @apply bg-gray-800 text-gray-100 p-4 my-4 rounded-lg font-mono text-sm leading-relaxed overflow-y-auto;
+  }
+  
+  .pm-btn {
+    @apply px-6 py-2 rounded-lg font-semibold text-white transition-all duration-200 border-none cursor-pointer;
+  }
+  
+  .pm-btn:hover {
+    @apply -translate-y-0.5 shadow-md;
   }
 }

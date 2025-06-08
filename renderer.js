@@ -23,9 +23,11 @@ function buildUI() {
     const cb = document.createElement('input');
     cb.type = 'checkbox';
     cb.id = `cb-${key}`;
-    cb.className = 'accent-blue-500';
     cb.checked = section.enabled;
     label.appendChild(cb);
+    const customCheck = document.createElement('span');
+    customCheck.className = 'pm-custom-checkbox';
+    label.appendChild(customCheck);
     const span = document.createElement('span');
     span.textContent = section.label || key;
     label.appendChild(span);
